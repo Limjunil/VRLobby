@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -302,19 +302,19 @@ namespace BNG {
         }
 
         public virtual void AddCanvas(Canvas canvas) {
-#if XRIT_INTEGRATION
-            if(UseXRInteractionToolkitUISystem) {
-                AddCanvasToCamera(canvas, Camera.main);
+//#if XRIT_INTEGRATION
+//            if(UseXRInteractionToolkitUISystem) {
+//                AddCanvasToCamera(canvas, Camera.main);
 
-                // Add raycaster if not already present
-                canvas.gameObject.AddComponent<UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster>();
-            }
-            else {
-                AddCanvasToCamera(canvas, cameraCaster);
-            }
-#else
+//                // Add raycaster if not already present
+//                canvas.gameObject.AddComponent<UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster>();
+//            }
+//            else {
+//                AddCanvasToCamera(canvas, cameraCaster);
+//            }
+//#else
         AddCanvasToCamera(canvas, cameraCaster);
-#endif
+//#endif
         }
 
         public virtual void AddCanvasToCamera(Canvas canvas, Camera cam) {
