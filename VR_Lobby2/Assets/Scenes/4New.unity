@@ -527,6 +527,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR_Rigidbody
       objectReference: {fileID: 0}
+    - target: {fileID: 6911304636035755364, guid: 269700ffe0ec4a24e90b72fa85fe8454,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911304636035755364, guid: 269700ffe0ec4a24e90b72fa85fe8454,
+        type: 3}
+      propertyPath: GravityEnabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
