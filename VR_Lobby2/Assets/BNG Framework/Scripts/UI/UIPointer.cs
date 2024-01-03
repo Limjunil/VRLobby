@@ -1,12 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-#if XRIT_INTEGRATION
-using UnityEngine.XR.Interaction.Toolkit;
-#endif
+//#if XRIT_INTEGRATION
+//using UnityEngine.XR.Interaction.Toolkit;
+//#endif
 
 namespace BNG {
 
@@ -68,64 +68,64 @@ namespace BNG {
                 lineRenderer = GetComponent<LineRenderer>();
             }
 
-#if XRIT_INTEGRATION
-            // Setup XRIT info
-            if (VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
+//#if XRIT_INTEGRATION
+//            // Setup XRIT info
+//            if (VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
 
-                // Add the XRaycaster if it's not currently attached
-                SetupXRITRaycaster();
-            }
-            else {
-                uiSystem = VRUISystem.Instance;
-            }
-#else
+//                // Add the XRaycaster if it's not currently attached
+//                SetupXRITRaycaster();
+//            }
+//            else {
+//                uiSystem = VRUISystem.Instance;
+//            }
+//#else
             uiSystem = VRUISystem.Instance;
-#endif
+//#endif
         }
 
-#if XRIT_INTEGRATION
-        XRRayInteractor xrRay;
-        XRInteractorLineVisual vis;
+//#if XRIT_INTEGRATION
+//        XRRayInteractor xrRay;
+//        XRInteractorLineVisual vis;
 
-public virtual void SetupXRITRaycaster() {
-    // Check if user has already added any components
-    xrRay = gameObject.GetComponent<XRRayInteractor>();
-    vis = gameObject.GetComponent<XRInteractorLineVisual>();
-    Gradient curColor = null;
+//public virtual void SetupXRITRaycaster() {
+//    // Check if user has already added any components
+//    xrRay = gameObject.GetComponent<XRRayInteractor>();
+//    vis = gameObject.GetComponent<XRInteractorLineVisual>();
+//    Gradient curColor = null;
 
-    if(xrRay == null) {
+//    if(xrRay == null) {
 
-        ActionBasedController abc = gameObject.AddComponent<ActionBasedController>();
-        xrRay = gameObject.AddComponent<XRRayInteractor>();
+//        ActionBasedController abc = gameObject.AddComponent<ActionBasedController>();
+//        xrRay = gameObject.AddComponent<XRRayInteractor>();
 
-        // Setup default ui input action
-        if (VRUISystem.Instance.UIInputAction != null) {
-            abc.uiPressAction = new UnityEngine.InputSystem.InputActionProperty(VRUISystem.Instance.UIInputAction);
+//        // Setup default ui input action
+//        if (VRUISystem.Instance.UIInputAction != null) {
+//            abc.uiPressAction = new UnityEngine.InputSystem.InputActionProperty(VRUISystem.Instance.UIInputAction);
 
-            // For testing
-            abc.selectAction = new UnityEngine.InputSystem.InputActionProperty(VRUISystem.Instance.UIInputAction);
-        }
+//            // For testing
+//            abc.selectAction = new UnityEngine.InputSystem.InputActionProperty(VRUISystem.Instance.UIInputAction);
+//        }
                 
-        LineRenderer lr = GetComponent<LineRenderer>();
-        if(lr) {
-            lr.useWorldSpace = true;
-            curColor = lr.colorGradient;
-        }
-    }
+//        LineRenderer lr = GetComponent<LineRenderer>();
+//        if(lr) {
+//            lr.useWorldSpace = true;
+//            curColor = lr.colorGradient;
+//        }
+//    }
 
-    if(vis == null) {
-        // Setup XRay Visual
-        vis = gameObject.AddComponent<XRInteractorLineVisual>();
-        vis.lineWidth = 0.01f;
+//    if(vis == null) {
+//        // Setup XRay Visual
+//        vis = gameObject.AddComponent<XRInteractorLineVisual>();
+//        vis.lineWidth = 0.01f;
 
-        // Setup the color
-        if(curColor != null) {
-            vis.validColorGradient = curColor;
-            vis.invalidColorGradient = curColor;
-        }
-    }
-}
-#endif
+//        // Setup the color
+//        if(curColor != null) {
+//            vis.validColorGradient = curColor;
+//            vis.invalidColorGradient = curColor;
+//        }
+//    }
+//}
+//#endif
 
         void OnEnable() {
 #if XRIT_INTEGRATION
@@ -153,32 +153,32 @@ public virtual void SetupXRITRaycaster() {
         }
 
         public void Update() {
-#if XRIT_INTEGRATION
-            if(VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
-                // Update raycast line
-                RaycastHit? hit;
-                RaycastResult? hitResult;
-                int hitIndex = -1;
-                bool hitIsUI = false;
-                if (xrRay.TryGetCurrentRaycast(out hit, out hitIndex, out hitResult, out hitIndex, out hitIsUI)) {
-                    if((hitResult.HasValue && hitResult.Value.isValid) || (hit.HasValue && hit.Value.collider.gameObject.GetComponent<XRBaseInteractable>() != null)) {
-                        vis.enabled = true;
-                    }
-                    else {
-                        vis.enabled = false;
-                    }
+//#if XRIT_INTEGRATION
+//            if(VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
+//                // Update raycast line
+//                RaycastHit? hit;
+//                RaycastResult? hitResult;
+//                int hitIndex = -1;
+//                bool hitIsUI = false;
+//                if (xrRay.TryGetCurrentRaycast(out hit, out hitIndex, out hitResult, out hitIndex, out hitIsUI)) {
+//                    if((hitResult.HasValue && hitResult.Value.isValid) || (hit.HasValue && hit.Value.collider.gameObject.GetComponent<XRBaseInteractable>() != null)) {
+//                        vis.enabled = true;
+//                    }
+//                    else {
+//                        vis.enabled = false;
+//                    }
                     
-                }
-                else {
-                    vis.enabled = false;
-                }
-            }
-            else {
-                UpdatePointer();
-            }
-#else
+//                }
+//                else {
+//                    vis.enabled = false;
+//                }
+//            }
+//            else {
+//                UpdatePointer();
+//            }
+//#else
             UpdatePointer();
-#endif
+//#endif
         }
 
         public virtual void UpdatePointer() {

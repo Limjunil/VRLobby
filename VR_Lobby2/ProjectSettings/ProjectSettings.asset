@@ -225,8 +225,8 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
-  AndroidTargetSdkVersion: 25
+  AndroidMinSdkVersion: 28
+  AndroidTargetSdkVersion: 32
   AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
@@ -997,7 +997,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -1017,11 +1023,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: c577f1db-7c24-4b99-a15e-79b7c774b092
+  cloudProjectId: 5b9f9c20-7c32-4132-8870-c8db36e4b0cf
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: "\u3147\u3145\u3147"
-  organizationId: warden02
+  projectName: VrLobbyTest
+  organizationId: limjunil
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}
