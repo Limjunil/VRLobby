@@ -32,7 +32,11 @@ public class MYSQLTest : MonoBehaviour
             $"Pwd={pwd}"
             ))
         {
+<<<<<<< HEAD
             string nsa2 = null;
+=======
+            string nsa1 = null;
+>>>>>>> LobbySet
             connection.Open();
             string sql_ = $"SELECT * FROM gdstage WHERE id = '{stageName}'";
             MySqlCommand command = new MySqlCommand(sql_, connection);
