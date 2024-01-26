@@ -6,17 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/01.Scene1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/01.Junil/LobbyScenes/00.InitScene.unity
+    guid: 5f4f9138efe79d1448dc037a021875be
   - enabled: 1
-    path: Assets/Scenes/02.Scene2.unity
+    path: Assets/01.Junil/LobbyScenes/01.Scene1.unity
+    guid: 04e2d214e0c1f1d49b320c1b75e9d98e
+  - enabled: 1
+    path: Assets/01.Junil/LobbyScenes/02.Scene2.unity
     guid: 26f8ccb3b840f6f459178c6dd84bccbf
   - enabled: 1
-    path: Assets/Scenes/03.Scene3.unity
+    path: Assets/01.Junil/LobbyScenes/03.Scene3.unity
     guid: bc052ad4a25446a42925e7a7a68263ad
   - enabled: 1
-    path: Assets/Scenes/04.Scene4.unity
-    guid: 8204f89cc05b62241aa1e412546c71a5
+    path: Assets/01.Junil/LobbyScenes/04.Scene4.unity
+    guid: 14ff1613d7e77bb4baa1d0c0a984254f
+  - enabled: 1
+    path: Assets/Scenes/20.DownScene.unity
+    guid: 61b9691e0fe22fe438b46e8b60d118f3
+  - enabled: 1
+    path: Assets/Scenes/21.LoadingScene.unity
+    guid: 8961e4b76bcd8804cb7394c6d3bc0026
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c5f61024b3ec97245a8d370e96b74c70,
       type: 2}

@@ -196,6 +196,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PlusAnim",
+                    "type": "Button",
+                    "id": "348f23a3-b776-461d-b34d-930111c5fdca",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MinusAnim",
+                    "type": "Button",
+                    "id": "cf7e53f0-1177-4c2d-8b45-1b91e379eb6f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -517,6 +535,28 @@
                     "action": "Teleport Start",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c178d7ac-c724-4a3f-a42b-937e6ae14ff1",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlusAnim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0f3ecab-a23c-4cb6-98e1-974d1e444598",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MinusAnim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -645,6 +685,24 @@
                     "name": "Menu",
                     "type": "Button",
                     "id": "60c5a40c-c201-4ed5-b062-9d494a3f85b8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RePlayAnim",
+                    "type": "Button",
+                    "id": "02078a01-39da-4cd5-90ba-28149bdb11cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ResetAnim",
+                    "type": "Button",
+                    "id": "55662fcb-ae85-420e-a6f6-1afe8f4c2cb9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -913,6 +971,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "765d5f0b-6f95-46b8-ab67-4811f54254b9",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RePlayAnim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65a8342c-5f12-4890-a761-d315fc9c3f83",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetAnim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

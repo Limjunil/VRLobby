@@ -128,16 +128,16 @@ namespace BNG {
 //#endif
 
         void OnEnable() {
-#if XRIT_INTEGRATION
-            if (VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
+////#if XRIT_INTEGRATION
+//            if (VRUISystem.Instance.UseXRInteractionToolkitUISystem) {
 
-            }
-            else {
-                updateUITransforms();
-            }
-#else
+//            }
+//            else {
+//                updateUITransforms();
+//            }
+////#else
             updateUITransforms();
-#endif
+//#endif
         }
 
         void updateUITransforms() {
