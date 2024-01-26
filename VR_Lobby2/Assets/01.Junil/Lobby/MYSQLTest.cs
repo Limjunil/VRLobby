@@ -18,7 +18,8 @@ public class MYSQLTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GetGdStage("1");
+
+
     }
 
     public void GetGdStage(string stageName)
@@ -31,6 +32,7 @@ public class MYSQLTest : MonoBehaviour
             $"Pwd={pwd}"
             ))
         {
+            string nsa = null;
             connection.Open();
             string sql_ = $"SELECT * FROM gdstage WHERE id = '{stageName}'";
             MySqlCommand command = new MySqlCommand(sql_, connection);
